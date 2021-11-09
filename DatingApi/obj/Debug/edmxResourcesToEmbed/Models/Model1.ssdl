@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_a7998a_irfan093Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AllLocation">
+    <Key>
+      <PropertyRef Name="LocationID" />
+    </Key>
+    <Property Name="LocationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityName" Type="varchar(max)" />
+    <Property Name="LocationName" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="BlockUser">
+    <Key>
+      <PropertyRef Name="BlockId" />
+    </Key>
+    <Property Name="BlockId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserEmail" Type="varchar" MaxLength="200" />
+    <Property Name="BlockByEmail" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="DatingUser">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserEmail" Type="varchar" MaxLength="500" />
+    <Property Name="UserName" Type="varchar" MaxLength="500" />
+    <Property Name="UserPhone" Type="varchar" MaxLength="200" />
+    <Property Name="UserGender" Type="varchar" MaxLength="100" />
+    <Property Name="UserSex" Type="varchar" MaxLength="100" />
+    <Property Name="UserAge" Type="int" />
+    <Property Name="UserMaxDistance" Type="int" />
+    <Property Name="UserDistanceUnit" Type="varchar" MaxLength="20" />
+    <Property Name="ShareMyFeed" Type="bit" />
+    <Property Name="ShowMeInTopPick" Type="bit" />
+    <Property Name="UserActvieStatus" Type="bit" />
+    <Property Name="UserLastSeen" Type="datetime" />
+    <Property Name="UserImage" Type="varchar(max)" />
+    <Property Name="RecommendSort" Type="bit" />
+    <Property Name="LocationLatitude" Type="float" />
+    <Property Name="LocationLongititude" Type="float" />
+    <Property Name="LocationName" Type="varchar(max)" />
+    <Property Name="UserInterest" Type="varchar(max)" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="AboutKarter" Type="varchar(max)" />
+    <Property Name="LookingFor" Type="varchar" MaxLength="100" />
+    <Property Name="Profession" Type="varchar" MaxLength="200" />
+    <Property Name="Height" Type="varchar" MaxLength="200" />
+    <Property Name="IsUserActive" Type="bit" />
+    <Property Name="IsSuperLikeSubscribed" Type="bit" />
+    <Property Name="UserMartialStatus" Type="varchar(max)" />
+    <Property Name="UserPassword" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="SubscriptionPlan">
+    <Key>
+      <PropertyRef Name="PlanId" />
+    </Key>
+    <Property Name="PlanId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserEmail" Type="varchar(max)" />
+    <Property Name="PlanDescription" Type="varchar(max)" />
+    <Property Name="PlanStartDate" Type="datetime" />
+    <Property Name="PlanEndDate" Type="datetime" />
+    <Property Name="PlanAmount" Type="float" />
+    <Property Name="PlanMonths" Type="int" />
+    <Property Name="IsPlanActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="UserFilter">
+    <Key>
+      <PropertyRef Name="FilterId" />
+    </Key>
+    <Property Name="FilterId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsViewStyleClassic" Type="bit" />
+    <Property Name="LocationName" Type="varchar(max)" />
+    <Property Name="LocationLatitude" Type="float" />
+    <Property Name="LocationLongititude" Type="float" />
+    <Property Name="Gender" Type="varchar(max)" />
+    <Property Name="Distance" Type="float" />
+    <Property Name="Sex" Type="varchar(max)" />
+    <Property Name="AgeFrom" Type="int" />
+    <Property Name="AgeTo" Type="int" />
+    <Property Name="UserInterest" Type="varchar(max)" />
+    <Property Name="UserEmail" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="UserLikes">
+    <Key>
+      <PropertyRef Name="LikeId" />
+    </Key>
+    <Property Name="LikeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserEmail" Type="varchar(max)" />
+    <Property Name="LikeByUserEmail" Type="varchar(max)" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="LikeDate" Type="datetime" />
+    <Property Name="IsSuperLike" Type="bit" />
+    <Property Name="IsSeen" Type="bit" />
+  </EntityType>
+  <EntityType Name="UserLocation">
+    <Key>
+      <PropertyRef Name="UserLocationId" />
+    </Key>
+    <Property Name="UserLocationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserEmail" Type="varchar" MaxLength="200" />
+    <Property Name="LocationID" Type="int" />
+  </EntityType>
+  <EntityType Name="UserMessage">
+    <Key>
+      <PropertyRef Name="MessageId" />
+    </Key>
+    <Property Name="MessageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MessageFrom" Type="varchar(max)" />
+    <Property Name="MessageTo" Type="varchar(max)" />
+    <Property Name="MessageType" Type="varchar" MaxLength="10" />
+    <Property Name="MessageDateTime" Type="datetime" />
+    <Property Name="MessageContent" Type="nvarchar(max)" />
+    <Property Name="IsDeletedFrom" Type="bit" />
+    <Property Name="IsDeletedTo" Type="bit" />
+    <Property Name="IsSeen" Type="bit" />
+  </EntityType>
+  <EntityType Name="UserNotification">
+    <Key>
+      <PropertyRef Name="NotificationID" />
+    </Key>
+    <Property Name="NotificationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserEmail" Type="varchar" MaxLength="500" />
+    <Property Name="NotificationDescription" Type="varchar(max)" />
+    <Property Name="NotificationDateTime" Type="datetime" />
+    <Property Name="NotificationByEmail" Type="varchar(max)" />
+    <Property Name="IsSeen" Type="bit" />
+  </EntityType>
+  <EntityType Name="UserPhotos">
+    <Key>
+      <PropertyRef Name="PhotoId" />
+    </Key>
+    <Property Name="PhotoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Photo" Type="varchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UserEmail" Type="varchar(max)" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="PhotoLikes" Type="int" />
+  </EntityType>
+  <EntityContainer Name="db_a7998a_irfan093ModelStoreContainer">
+    <EntitySet Name="AllLocation" EntityType="Self.AllLocation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BlockUser" EntityType="Self.BlockUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DatingUser" EntityType="Self.DatingUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubscriptionPlan" EntityType="Self.SubscriptionPlan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserFilter" EntityType="Self.UserFilter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserLikes" EntityType="Self.UserLikes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserLocation" EntityType="Self.UserLocation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserMessage" EntityType="Self.UserMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserNotification" EntityType="Self.UserNotification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserPhotos" EntityType="Self.UserPhotos" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

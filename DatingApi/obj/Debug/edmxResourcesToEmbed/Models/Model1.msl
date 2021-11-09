@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_a7998a_irfan093ModelStoreContainer" CdmEntityContainer="DatingEntities">
+    <EntitySetMapping Name="AllLocations">
+      <EntityTypeMapping TypeName="db_a7998a_irfan093Model.AllLocation">
+        <MappingFragment StoreEntitySet="AllLocation">
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatingUsers">
+      <EntityTypeMapping TypeName="db_a7998a_irfan093Model.DatingUser">
+        <MappingFragment StoreEntitySet="DatingUser">
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserMartialStatus" ColumnName="UserMartialStatus" />
+          <ScalarProperty Name="IsSuperLikeSubscribed" ColumnName="IsSuperLikeSubscribed" />
+          <ScalarProperty Name="IsUserActive" ColumnName="IsUserActive" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Profession" ColumnName="Profession" />
+          <ScalarProperty Name="LookingFor" ColumnName="LookingFor" />
+          <ScalarProperty Name="AboutKarter" ColumnName="AboutKarter" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserPhone" ColumnName="UserPhone" />
+          <ScalarProperty Name="UserGender" ColumnName="UserGender" />
+          <ScalarProperty Name="UserSex" ColumnName="UserSex" />
+          <ScalarProperty Name="UserAge" ColumnName="UserAge" />
+          <ScalarProperty Name="UserMaxDistance" ColumnName="UserMaxDistance" />
+          <ScalarProperty Name="UserDistanceUnit" ColumnName="UserDistanceUnit" />
+          <ScalarProperty Name="ShareMyFeed" ColumnName="ShareMyFeed" />
+          <ScalarProperty Name="ShowMeInTopPick" ColumnName="ShowMeInTopPick" />
+          <ScalarProperty Name="UserActvieStatus" ColumnName="UserActvieStatus" />
+          <ScalarProperty Name="UserLastSeen" ColumnName="UserLastSeen" />
+          <ScalarProperty Name="UserImage" ColumnName="UserImage" />
+          <ScalarProperty Name="RecommendSort" ColumnName="RecommendSort" />
+          <ScalarProperty Name="LocationLatitude" ColumnName="LocationLatitude" />
+          <ScalarProperty Name="LocationLongititude" ColumnName="LocationLongititude" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="UserInterest" ColumnName="UserInterest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserFilters">
+      <EntityTypeMapping TypeName="db_a7998a_irfan093Model.UserFilter">
+        <MappingFragment StoreEntitySet="UserFilter">
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="FilterId" ColumnName="FilterId" />
+          <ScalarProperty Name="IsViewStyleClassic" ColumnName="IsViewStyleClassic" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="LocationLatitude" ColumnName="LocationLatitude" />
+          <ScalarProperty Name="LocationLongititude" ColumnName="LocationLongititude" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Distance" ColumnName="Distance" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="AgeFrom" ColumnName="AgeFrom" />
+          <ScalarProperty Name="AgeTo" ColumnName="AgeTo" />
+          <ScalarProperty Name="UserInterest" ColumnName="UserInterest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserLikes">
+      <EntityTypeMapping TypeName="db_a7998a_irfan093Model.UserLike">
+        <MappingFragment StoreEntitySet="UserLikes">
+          <ScalarProperty Name="IsSeen" ColumnName="IsSeen" />
+          <ScalarProperty Name="IsSuperLike" ColumnName="IsSuperLike" />
+          <ScalarProperty Name="LikeDate" ColumnName="LikeDate" />
+          <ScalarProperty Name="LikeId" ColumnName="LikeId" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="LikeByUserEmail" ColumnName="LikeByUserEmail" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserLocations">
+      <EntityTypeMapping TypeName="db_a7998a_irfan093Model.UserLocation">
+        <MappingFragment StoreEntitySet="UserLocation">
+          <ScalarProperty Name="UserLocationId" ColumnName="UserLocationId" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserPhotos">
+      <EntityTypeMapping TypeName="db_a7998a_irfan093Model.UserPhoto">
+        <MappingFragment StoreEntitySet="UserPhotos">
+          <ScalarProperty Name="PhotoId" ColumnName="PhotoId" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="PhotoLikes" ColumnName="PhotoLikes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserMessages">
+      <EntityTypeMapping TypeName="db_a7998a_irfan093Model.UserMessage">
+        <MappingFragment StoreEntitySet="UserMessage">
+          <ScalarProperty Name="IsSeen" ColumnName="IsSeen" />
+          <ScalarProperty Name="IsDeletedTo" ColumnName="IsDeletedTo" />
+          <ScalarProperty Name="IsDeletedFrom" ColumnName="IsDeletedFrom" />
+          <ScalarProperty Name="MessageContent" ColumnName="MessageContent" />
+          <ScalarProperty Name="MessageDateTime" ColumnName="MessageDateTime" />
+          <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+          <ScalarProperty Name="MessageTo" ColumnName="MessageTo" />
+          <ScalarProperty Name="MessageFrom" ColumnName="MessageFrom" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubscriptionPlans">
+      <EntityTypeMapping TypeName="db_a7998a_irfan093Model.SubscriptionPlan">
+        <MappingFragment StoreEntitySet="SubscriptionPlan">
+          <ScalarProperty Name="IsPlanActive" ColumnName="IsPlanActive" />
+          <ScalarProperty Name="PlanMonths" ColumnName="PlanMonths" />
+          <ScalarProperty Name="PlanAmount" ColumnName="PlanAmount" />
+          <ScalarProperty Name="PlanEndDate" ColumnName="PlanEndDate" />
+          <ScalarProperty Name="PlanStartDate" ColumnName="PlanStartDate" />
+          <ScalarProperty Name="PlanDescription" ColumnName="PlanDescription" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="PlanId" ColumnName="PlanId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserNotifications">
+      <EntityTypeMapping TypeName="db_a7998a_irfan093Model.UserNotification">
+        <MappingFragment StoreEntitySet="UserNotification">
+          <ScalarProperty Name="IsSeen" ColumnName="IsSeen" />
+          <ScalarProperty Name="NotificationByEmail" ColumnName="NotificationByEmail" />
+          <ScalarProperty Name="NotificationDateTime" ColumnName="NotificationDateTime" />
+          <ScalarProperty Name="NotificationDescription" ColumnName="NotificationDescription" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="NotificationID" ColumnName="NotificationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlockUsers">
+      <EntityTypeMapping TypeName="db_a7998a_irfan093Model.BlockUser">
+        <MappingFragment StoreEntitySet="BlockUser">
+          <ScalarProperty Name="BlockByEmail" ColumnName="BlockByEmail" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="BlockId" ColumnName="BlockId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

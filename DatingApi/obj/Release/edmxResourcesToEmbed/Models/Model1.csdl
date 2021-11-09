@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_a7998a_irfan093Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AllLocation">
+    <Key>
+      <PropertyRef Name="LocationID" />
+    </Key>
+    <Property Name="LocationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CityName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LocationName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DatingUser">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserEmail" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="UserPhone" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="UserGender" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UserSex" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UserAge" Type="Int32" />
+    <Property Name="UserMaxDistance" Type="Int32" />
+    <Property Name="UserDistanceUnit" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ShareMyFeed" Type="Boolean" />
+    <Property Name="ShowMeInTopPick" Type="Boolean" />
+    <Property Name="UserActvieStatus" Type="Boolean" />
+    <Property Name="UserLastSeen" Type="DateTime" Precision="3" />
+    <Property Name="UserImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="RecommendSort" Type="Boolean" />
+    <Property Name="LocationLatitude" Type="Double" />
+    <Property Name="LocationLongititude" Type="Double" />
+    <Property Name="LocationName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserInterest" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="DateTime" Precision="3" />
+    <Property Name="AboutKarter" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LookingFor" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Profession" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Height" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IsUserActive" Type="Boolean" />
+    <Property Name="IsSuperLikeSubscribed" Type="Boolean" />
+    <Property Name="UserMartialStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserPassword" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UserFilter">
+    <Key>
+      <PropertyRef Name="FilterId" />
+    </Key>
+    <Property Name="FilterId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IsViewStyleClassic" Type="Boolean" />
+    <Property Name="LocationName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LocationLatitude" Type="Double" />
+    <Property Name="LocationLongititude" Type="Double" />
+    <Property Name="Gender" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Distance" Type="Double" />
+    <Property Name="Sex" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AgeFrom" Type="Int32" />
+    <Property Name="AgeTo" Type="Int32" />
+    <Property Name="UserInterest" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UserLike">
+    <Key>
+      <PropertyRef Name="LikeId" />
+    </Key>
+    <Property Name="LikeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LikeByUserEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="LikeDate" Type="DateTime" Precision="3" />
+    <Property Name="IsSuperLike" Type="Boolean" />
+    <Property Name="IsSeen" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="UserLocation">
+    <Key>
+      <PropertyRef Name="UserLocationId" />
+    </Key>
+    <Property Name="UserLocationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="LocationID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="UserPhoto">
+    <Key>
+      <PropertyRef Name="PhotoId" />
+    </Key>
+    <Property Name="PhotoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UserEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="PhotoLikes" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="DatingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AllLocations" EntityType="Self.AllLocation" />
+    <EntitySet Name="DatingUsers" EntityType="Self.DatingUser" />
+    <EntitySet Name="UserFilters" EntityType="Self.UserFilter" />
+    <EntitySet Name="UserLikes" EntityType="Self.UserLike" />
+    <EntitySet Name="UserLocations" EntityType="Self.UserLocation" />
+    <EntitySet Name="UserPhotos" EntityType="Self.UserPhoto" />
+    <EntitySet Name="UserMessages" EntityType="db_a7998a_irfan093Model.UserMessage" />
+    <EntitySet Name="SubscriptionPlans" EntityType="db_a7998a_irfan093Model.SubscriptionPlan" />
+    <EntitySet Name="UserNotifications" EntityType="db_a7998a_irfan093Model.UserNotification" />
+    <EntitySet Name="BlockUsers" EntityType="db_a7998a_irfan093Model.BlockUser" />
+  </EntityContainer>
+  <EntityType Name="UserMessage">
+    <Key>
+      <PropertyRef Name="MessageId" />
+    </Key>
+    <Property Name="MessageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MessageFrom" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MessageTo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MessageType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MessageDateTime" Type="DateTime" Precision="3" />
+    <Property Name="MessageContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeletedFrom" Type="Boolean" />
+    <Property Name="IsDeletedTo" Type="Boolean" />
+    <Property Name="IsSeen" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="SubscriptionPlan">
+    <Key>
+      <PropertyRef Name="PlanId" />
+    </Key>
+    <Property Name="PlanId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PlanDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PlanStartDate" Type="DateTime" Precision="3" />
+    <Property Name="PlanEndDate" Type="DateTime" Precision="3" />
+    <Property Name="PlanAmount" Type="Double" />
+    <Property Name="PlanMonths" Type="Int32" />
+    <Property Name="IsPlanActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="UserNotification">
+    <Key>
+      <PropertyRef Name="NotificationID" />
+    </Key>
+    <Property Name="NotificationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserEmail" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="NotificationDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NotificationDateTime" Type="DateTime" Precision="3" />
+    <Property Name="NotificationByEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsSeen" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="BlockUser">
+    <Key>
+      <PropertyRef Name="BlockId" />
+    </Key>
+    <Property Name="BlockId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="BlockByEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

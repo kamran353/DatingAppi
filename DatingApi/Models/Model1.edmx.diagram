@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9cc91b3d82d74b3c91d77a337d7da2d1" Name="Diagram1">
+        <EntityTypeShape EntityType="db_a7998a_irfan093Model.AllLocation" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a7998a_irfan093Model.DatingUser" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a7998a_irfan093Model.UserFilter" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a7998a_irfan093Model.UserLike" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a7998a_irfan093Model.UserLocation" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a7998a_irfan093Model.UserPhoto" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a7998a_irfan093Model.UserMessage" Width="1.5" PointX="7.375" PointY="3.75" />
+        <EntityTypeShape EntityType="db_a7998a_irfan093Model.SubscriptionPlan" Width="1.5" PointX="5.375" PointY="7.75" />
+        <EntityTypeShape EntityType="db_a7998a_irfan093Model.UserNotification" Width="1.5" PointX="7.375" PointY="7.75" />
+        <EntityTypeShape EntityType="db_a7998a_irfan093Model.BlockUser" Width="1.5" PointX="9.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
